@@ -21,7 +21,10 @@
           <div class="profile__image"></div>
           <div class="profile__info">
             <h1 class="profile__title"></h1>
-            <button class="profile__edit-button" type="button"></button>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <button class="profile__edit-button" type="button"></button>
+              <button class="profile__stats-button" type="button" style="background: none; border: none; font-size: 24px; cursor: pointer;">📊</button>
+            </div>
             <p class="profile__description"></p>
           </div>
           <button class="profile__add-button" type="button"></button>
@@ -50,6 +53,7 @@
                 minlength="2"
                 maxlength="40"
                 pattern="[a-zA-Zа-яА-ЯёЁ\s-]+"
+                data-error-message="Имя может содержать только буквы, пробелы и дефисы"
               />
               <span class="popup__error user-name-error"></span>
             </label>
@@ -89,6 +93,7 @@
                 minlength="2"
                 maxlength="30"
                 pattern="[a-zA-Zа-яА-ЯёЁ\s-]+"
+                data-error-message="Название может содержать только буквы, пробелы и дефисы"
               />
               <span class="popup__error place-name-error"></span>
             </label>
